@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Iniciar sesión</title>
+    <link rel="stylesheet" href="../styles/inicio_sesion_styles.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <!--          HEADER                 -->
+    <header>
+        <nav>
+        <!-- nombre de la empresa -->
+            <div class="company__container">
+                <h1 class="company__name"><a href="index.html" class="company__a">Envía Ya!</a></h1>
+            </div>            
+        <!-- barra de búsqueda -->
+            <div class="search__container">
+                <form method="post">
+                    <input type="search" name="search" id="search" placeholder="buscar" required="required" class="search">
+                    <input type="submit" value="" class="search__submit">
+                </form>  
+            </div>
+        <!-- barra de navegación -->
+            <div class="nav-bar__container">
+                <ul class="nav-bar__ul">
+                    <li class="nav-bar__li">
+                        <a href="index.html" class="nav-bar__a">Inicio</a>
+                    </li>
+                    <li class="nav-bar__li">
+                        <a href="productos.html" class="nav-bar__a">Productos</a>
+                    </li>                    
+                </ul>
+                <div class="nav-bar__img--container">
+                    <a href="inicio_sesion.html" >
+                         <img src="../images/header/login-icon.png" alt="login-icon" class="nav-bar__img">
+                    </a>
+                </div>                
+             </div>
+         </nav>
+    </header>
+    <!--           MAIN                       -->
+    <main>
+        <h2 class="encabezado">Inicio de sesión</h2>               
+            <div class="form__container">            
+                <form class="form">                    
+                    <div class="form__img-container">                        
+                        <div class="form__img"></div>                       
+                    </div>                    
+                    <label class="form__label">Correo:</label>               
+                    <input type="email" name="email" required autocomplete="on" autofocus placeholder="Mi_correo@algo.com" class="form__input">           
+                    <label class="form__label">Contraseña:</label>            
+                    <input type="password" name="password" required autocomplete="on" placeholder="••••••••" class="form__input">            
+                    <input type="submit" value="Iniciar sesión"  class="form__button">                    
+                </form>                
+                <input type="button" value="Registrase" class="form__button">            
+            </div>        
+    </main>
+    <!--             FOOTER                          -->
+    <footer>        
+        <p>info@enviaya.com</p>
+        <p>+1 (800) 123-4567</p>
+        <p class="direction">1234 Calle Principal, Ciudad de EnvíaYa, Estado del Envío</p>
+    </footer>
+</body>
+</html>

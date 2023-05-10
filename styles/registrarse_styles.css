@@ -1,0 +1,195 @@
+*{
+    box-sizing: boder-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: Georgia,serif;    
+    display: flex;    
+    flex-direction: column;    
+}
+:root{
+    --color-primario:#007bff ;
+    --color-secundario:#0047ab;    
+    --gris-fondo:#eee;    
+    --negro-texto:#333;
+}
+/*              HEADER              */
+nav{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: var(--color-primario);
+    color: #ffffff;   
+    min-height: 6.4rem;
+}
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+/* company name */
+.company-name__container{
+    margin-left: 1.5rem;    
+    display: flex;    
+    align-items: center;
+}
+.company__name{
+    font-size: 4rem;  
+}
+/* barra de búsqueda */
+.search__container{
+    margin: auto;
+    display: inline-block;
+    position: relative;    
+    margin-left: 1.5rem;
+    grid-column: 2/4;    
+    width: 90%;    
+}
+.search{
+    outline: none;
+    border-style: none;
+    border: 2px solid #ddd;
+    border-radius: 1rem;
+    width: 100%;
+    height: 2.5rem;
+    padding: 1rem;  
+    color: #555;
+}
+.search__submit{
+    display: inline-block;
+    width: 1.9rem;
+    height: 1.9rem;
+    position: absolute;
+    right: .59rem;
+    top: .25rem;    
+    background: url('../images/header/search-icon.png');  
+    background-repeat: no-repeat;   
+    background-size: cover;  
+    border: none;
+}
+/* barra de navegación */
+.nav-bar__container{
+    margin-right: 1.5rem;    
+    display: flex;    
+    align-items: center;    
+    justify-content: flex-end;    
+    grid-column: 4/5;    
+}
+.nav-bar__ul{
+    list-style: none;    
+    display: flex;    
+}
+.nav-bar__li{
+    margin-right: 1.5rem;   
+    padding: 1rem;  
+}
+.nav-bar__img--container{
+    align-self: center;
+}
+.nav-bar__img{
+    width: 3rem;
+    height: 3rem;
+}
+.nav-bar__li:hover{
+    background:#006aff;
+    border-radius: 1.5rem;
+}
+.nav-bar__li:hover > .nav-bar__a{
+    color: #eee;
+}
+.nav-bar__img:hover{
+    opacity: .5;
+}
+/*             MAIN                           */
+main{    
+    background:  var(--gris-fondo) ;    
+    flex-grow: 1;
+    padding-bottom: 5rem;
+}
+.encabezado{    
+    text-align: center;    
+    padding: 5rem;    
+    color: var(--negro-texto);    
+}
+/* formulario */
+.form__container{    
+    border: 2px solid #ddd;    
+    background: #fff9;    
+    width: 30vw;    
+    margin: auto;    
+    border-radius: 1.5rem;    
+    padding: 2.5rem;        
+}
+.form{    
+    display: flex;    
+    flex-direction: column;    
+}
+.form__img-container{    
+    background: #eee;    
+    border-radius: 50%;    
+    width: 10rem;   
+    height: 10rem;    
+    margin: auto;    
+    margin-bottom: 5rem;    
+}
+.form__img{    
+    border-radius: 50%;    
+    width: 10rem;    
+    height: 10rem;    
+    border: 2px;    
+    background: url('../images/iniciar-sesion/perfil-icon.png');    
+    background-size: cover;    
+    filter: opacity(.5);    
+}
+.form__label{    
+    margin-bottom: .5rem;    
+    color: var(--negro-texto);    
+}
+.form__input{    
+    margin-bottom: .5rem;    
+    height: 3rem;    
+    align-items: center;    
+    border: none;    
+    border-bottom: 1px solid #aaa;    
+    background: #fff4;
+    color: var(--negro-texto);    
+    width: 100%;    
+}
+.form__input:focus{    
+    outline: none;    
+    background: #fff;    
+}
+.form__button{    
+    align-self: center;    
+    border: 1px solid #44d5;    
+    background: var(--color-primario);    
+    width: 100%;    
+    border-radius: 1.5rem;    
+    height: 3rem;    
+    color: #fff;    
+    margin: .5rem 0 .5rem 0 ;    
+    font-size: 2rem;    
+    transition: all .7s;    
+}
+.form__button:hover{    
+    background: #0060ff;    
+    border-color: #00f;    
+    color: #eee;    
+}
+/*              FOOTER                       */
+footer{
+    background-color: var(--color-secundario);
+    color: #ffffff;
+    display: grid;    
+    grid-template-columns: repeat(4, 1fr);    
+    padding: 4rem 1.5rem 3rem 1.5rem;    
+    justify-content: flex-end;       
+}
+.direction{    
+    grid-column: 3/5;    
+    text-align: center;    
+}
