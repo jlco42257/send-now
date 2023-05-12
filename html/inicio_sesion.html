@@ -16,8 +16,8 @@
             </div>            
         <!-- barra de búsqueda -->
             <div class="search__container">
-                <form method="post">
-                    <input type="search" name="search" id="search" placeholder="buscar" required="required" class="search">
+                <form method="post" action="productos.html">
+                    <input type="search" name="search" id="search" placeholder="Buscar" required="required" class="search">
                     <input type="submit" value="" class="search__submit">
                 </form>  
             </div>
@@ -43,7 +43,7 @@
     <main>
         <h2 class="encabezado">Inicio de sesión</h2>               
             <div class="form__container">            
-                <form class="form">                    
+                <form class="form" action="../user-html/inicio.html">                    
                     <div class="form__img-container">                        
                         <div class="form__img"></div>                       
                     </div>                    
@@ -51,9 +51,9 @@
                     <input type="email" name="email" required autocomplete="on" autofocus placeholder="Mi_correo@algo.com" class="form__input">           
                     <label class="form__label">Contraseña:</label>            
                     <input type="password" name="password" required autocomplete="on" placeholder="••••••••" class="form__input">            
-                    <input type="submit" value="Iniciar sesión"  class="form__button">                    
+                    <input type="submit" value="Iniciar sesión"  class="form__button" id="iniciar">                    
                 </form>                
-                <input type="button" value="Registrase" class="form__button">            
+                <button class="form__button" id="registrar">Registrar</button>            
             </div>        
     </main>
     <!--             FOOTER                          -->
@@ -62,5 +62,7 @@
         <p>+1 (800) 123-4567</p>
         <p class="direction">1234 Calle Principal, Ciudad de EnvíaYa, Estado del Envío</p>
     </footer>
+    
+    <script src="../javascript/inicio_sesion.js"></script>
 </body>
 </html>

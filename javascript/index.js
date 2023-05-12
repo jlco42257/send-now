@@ -1,9 +1,10 @@
-const focus = document.querySelector(".oferts__container");
+const button = document.querySelector(".see-more__button");
+const comprar = document.querySelector(".oferts__button");
 
-function position(){
-    
-    focus.style.position = "absolute";
-    
-};
+comprar.addEventListener("click",(e)=>{
+    open("../html/productos-descuento.html");
+});
 
-focus.onclick = position();
+button.addEventListener("click",(e)=>{
+    open("../html/productos-descuento.html");
+});
