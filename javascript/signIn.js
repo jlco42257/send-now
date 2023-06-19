@@ -3,7 +3,7 @@ const pass = document.querySelector(".form__pass");
 const btn = document.querySelector(".form__btn");
 
 btn.addEventListener("click", e=>{
-    location.assign("signUp.php");
+    location.assign("?page=signUp");
 });
 
 email.setAttribute("required",true);

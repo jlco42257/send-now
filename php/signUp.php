@@ -1,7 +1,8 @@
 <?php
+    #    including connection to the db    #
     include("main.php");
     
-    #    receive data    #
+    #    receive data of the form    #
     $name = $_POST['name'];
     $lastName = $_POST['lastName'];
     $userName = $_POST['userName'];
@@ -11,7 +12,7 @@
     $pass = $_POST['pass'];
     $confirmPass = $_POST['confirmPass'];
     
-    #    validate password    #
+    #    validate passwords of the form    #
     if($pass != $confirmPass){
         echo '<div class="alert alert-light d-flex align-items-center" role="alert">
                   <div class="text-center">
@@ -21,7 +22,7 @@
         exit();
     }
     
-    #    verify username    #
+    #    verify username in the db    #
     $checkUName = connect();
     $checkUName = $checkUName->query("SELECT * FROM users WHERE userName='$userName'");
     if($checkUName->rowCount() > 0){
@@ -34,7 +35,7 @@
     }
     $checkUName = null;
     
-    #    verify phpne    #
+    #    verify phpne in the db    #
     $checkPhone = connect();
     $checkPhone = $checkPhone->query("SELECT * FROM users WHERE phone='$phone'");
     if($checkPhone->rowCount() > 0){
@@ -47,7 +48,7 @@
     }
     $checkPhone = null;
     
-    #    verify email    #
+    #    verify email in the db    #
     $checkEmail = connect();
     $checkEmail = $checkEmail->query("SELECT * FROM users WHERE userName='$userName'");
     if($checkEmail->rowCount() > 0){
@@ -60,7 +61,7 @@
     }
     $checkEmail = null;
     
-    #    saving data    #
+    #    saving data in the db    #
     $save = connect();
     $save = $save->prepare("INSERT INTO users(names,lastName,userName,phone,email,pass) VALUES(:name,:lastName,:userName,:phone,:email,:pass)");
     $markers = [

@@ -16,5 +16,5 @@ email.setAttribute("required",true);
 email.setAttribute("required",true);
 
 btn.addEventListener("click", e=>{
-    location.assign("signIn.php");
+    location.assign("?page=signIn");
 });

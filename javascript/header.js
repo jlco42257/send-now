@@ -5,7 +5,7 @@ const footer = document.querySelector(".footer");
 search.addEventListener("click",e=>{
     e.preventDefault();
     if (input.value.length > 0) {
-        location.assign("./pages/products.php");
+        location.assign("?page=products");
     }
 });
 

@@ -1,3 +1,17 @@
+<?php
+    $url = "http://".$_SERVER['HTTP_HOST']."/envia-ya";
+    #    verifying the session    #
+    if(!isset($_SESSION['email'])){
+        session_destroy();  
+        if(headers_sent()){
+            echo '<script>
+                    location.assign("./");
+                </script>';
+        }else{
+            header("Location: ./");
+        }  
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +25,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
         crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="../pages_styles/header-footer.css">
+    <link rel="stylesheet" href="pages_styles/header-footer.css">
 </head>
 <body>
     <header>
@@ -19,7 +33,7 @@
         <nav class="navbar navbar-expand-lg bg-primary">
             <div class="container-fluid bg-primary navbar-dark fixed-top">
                 <!--            BRAND             -->
-                <a class="navbar-brand fs-1 fw-bold" href="home.php">Send Now!</a>     
+                <a class="navbar-brand fs-1 fw-bold" href="<?php echo $url; ?>?page=users/home">Send Now!</a>     
                 <!--             COLLAPSE BUTTON             -->
                 <button 
                     class="navbar-toggler nav__container--button" 
@@ -36,13 +50,13 @@
                     <ul class="navbar-nav me-5">
                         <!-- home -->
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="home.php">
+                            <a class="nav-link active" aria-current="page" href="<?php echo $url; ?>?page=users/home">
                                 Home
                             </a>
                         </li>
                         <!-- products -->
                         <li class="nav-item">
-                           <a class="nav-link" href="products.php">Products</a> 
+                           <a class="nav-link" href="<?php echo $url; ?>?page=users/products">Products</a> 
                         </li>
                         <!-- account -->
                         <li class="nav-item dropdown">
@@ -59,7 +73,7 @@
                                 <li>
                                     <a 
                                         class="dropdown-item" 
-                                        href="signIn.php">
+                                        href="<?php echo $url; ?>?page=users/signIn">
                                         Sign in
                                     </a>
                                 </li>
@@ -67,7 +81,7 @@
                                 <li>
                                     <a 
                                         class="dropdown-item" 
-                                        href="signUp.php">
+                                        href="<?php echo $url; ?>?page=users/signUp">
                                         Sign up
                                     </a>
                                 </li>
@@ -75,7 +89,7 @@
                                 <li>
                                     <a 
                                         class="dropdown-item" 
-                                        href="myAccount.php">
+                                        href="<?php echo $url; ?>?page=users/myAccount">
                                         My account
                                     </a>
                                 </li>

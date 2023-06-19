@@ -1,10 +1,9 @@
-<?php
-    include("main.php");
-    include("sessionStart.php");
-    
+<?php 
+    #    receive data of the form    #
     $email = $_POST['email'];
     $pass = $_POST['pass'];
     
+    #    verifying the data in the db    #
     $checkAccount = connect();
     $checkAccount = $checkAccount->query("SELECT * FROM users WHERE email='$email' AND pass='$pass'");
     if($checkAccount->rowCount() == 1){
@@ -13,13 +12,15 @@
         $_SESSION['name'] = $checkAccount['names'];
         $_SESSION['lastName'] = $checkAccount['lastName'];
         $_SESSION['userName'] = $checkAccount['userName'];
+        $_SESSION['email'] = $checkAccount['email'];
+        $_SESSION['balance'] = $checkAccount['balance'];
         if(headers_sent()){
             echo '<script>
-                open("http://192.168.20.22:8080/envia-ya/userPages/home.php");
+               location.assign("index.php?page=users/home");
             </script>';
         }else{
-            header("Location: http://192.168.20.22:8080/envia-ya/userPages/home.php");
-        }  
+            header("Location: index.php?page=users/home");
+        }
     }else{
         echo '<div class="alert alert-light d-flex align-items-center" role="alert">
                   <div class="text-center">
@@ -27,4 +28,5 @@
                   </div>
                </div>';
     }
+    $checkAccount = null;
 ?>

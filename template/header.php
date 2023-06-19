@@ -14,7 +14,7 @@
         integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
         crossorigin="anonymous">
     <!-- css -->
-    <link rel="stylesheet" href="../pages_styles/header-footer.css">
+    <link rel="stylesheet" href="pages_styles/header-footer.css">
 </head>
 <body>
     <header>
@@ -46,7 +46,7 @@
                         </li>
                         <!-- products -->
                         <li class="nav-item">
-                           <a class="nav-link" href="<?php echo $url; ?>/pages/products.php">Products</a> 
+                           <a class="nav-link" href="<?php echo $url; ?>?page=products">Products</a> 
                         </li>
                         <!-- account -->
                         <li class="nav-item dropdown">
@@ -63,7 +63,7 @@
                                 <li>
                                     <a 
                                         class="dropdown-item" 
-                                        href="<?php echo $url; ?>/pages/signIn.php">
+                                        href="<?php echo $url; ?>?page=signIn">
                                         Sign in
                                     </a>
                                 </li>
@@ -71,7 +71,7 @@
                                 <li>
                                     <a 
                                         class="dropdown-item" 
-                                        href="<?php echo $url; ?>/pages/signUp.php">
+                                        href="<?php echo $url; ?>?page=signUp">
                                         Sign up
                                     </a>
                                 </li>
@@ -79,7 +79,7 @@
                                 <li>
                                     <a 
                                         class="dropdown-item" 
-                                        href="<?php echo $url; ?>/pages/signIn.php">
+                                        href="<?php echo $url; ?>?page=signIn">
                                         My account
                                     </a>
                                 </li>

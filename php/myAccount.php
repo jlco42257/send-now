@@ -1,5 +1,7 @@
 <?php
+    #    including the connect to the db    #
     include("main.php");
+    #    saving the data of the balance top-up form    #
     if(isset($_POST)){
         $newBalance = $_POST['balance'];
         $pass = $_POST['pass'];
@@ -12,6 +14,7 @@
             $balance += $newBalance;
             $topUp = connect();
             $topUp = $topUp->query("UPDATE users SET balance='$balance' WHERE phone='$phone'");
+            $_SESSION['balance'] += $newBalance;
             echo '<div class="alert alert-light d-flex align-items-center" role="alert">
                       <div class="text-center">
                         Balance was recharged successfully. =)

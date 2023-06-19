@@ -1,12 +1,13 @@
 <?php
+    #    closing the session    #
     include("sessionStart.php");
     session_destroy();
-    
+    #    redirect to index    #
     if(headers_sent()){
-            echo '<script>
-                open("http://192.168.20.22:8080/envia-ya/");
+        echo '<script>
+                location.assign("../");
             </script>';
-        }else{
-            header("Location: http://192.168.20.22:8080/envia-ya/");
-        }  
+    }else{
+        header("Location: ../");
+    }  
 ?>

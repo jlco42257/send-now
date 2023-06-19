@@ -1,6 +1,3 @@
-    <?php
-        include("../template/uHeader.php");
-    ?>
     <section class="bg-light">
         <!--             CAROUSEL             -->
         <h2 class="text-primary text-center pt-5 fs-1 mt-5 fw-bold">
@@ -27,14 +24,14 @@
             <!-- images -->
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-              <img src="../images/main/black-friday.jpg" class="d-block w-100" alt="oferta_1">
+              <img src="images/main/black-friday.jpg" class="d-block w-100" alt="oferta_1">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="../images/main/black-friday-1.jpg" 
+              <img src="images/main/black-friday-1.jpg" 
                   class="d-block w-100" alt="oferta_2">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="../images/main/black-friday-2.jpg" 
+              <img src="images/main/black-friday-2.jpg" 
                   class="d-block w-100" alt="oferta_3">
             </div>
           </div>
@@ -60,7 +57,7 @@
         <article class="container-fluid d-flex justify-content-evenly flex-wrap">
             <!-- first card -->
           <div class="card col-3">
-              <img src="../images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
+              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
@@ -74,7 +71,7 @@
           </div>
             <!-- second card -->
           <div class="card col-3">
-              <img src="../images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
+              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
@@ -88,7 +85,7 @@
           </div>
             <!-- thrid card -->
           <div class="card col-3">
-              <img src="../images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
+              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
@@ -108,7 +105,4 @@
         </div>
         </article>
     </section>
-    <script src="../javascript/index.js"></script>
-    <?php
-        include("../template/uFooter.php");
-    ?>
+    <script src="javascript/index.js"></script>

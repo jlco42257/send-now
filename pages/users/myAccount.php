@@ -1,15 +1,14 @@
 <?php
-    include("../template/uHeader.php");
-    include("../php/main.php");
+    include("php/main.php");
 ?>
 <section class="bg-light p-2">
-    <h2 class="pt-5 my-5 text-center fs-1 fw-bold"><?php echo $_SESSION['userName'];?> My Account</h2>
+    <h2 class="pt-5 my-5 text-center fs-1 fw-bold">My Account</h2>
     <!-- img -->
     <div class="d-flex justify-content-center">
         <img class="w-50 border rounded-circle opacity-50 bg-primary"
-             src="../images/header/profile-icon.png" alt="profile-icon">
+             src="images/header/profile-icon.png" alt="profile-icon">
     </div>
-    <p class="fs-1 fw-bold text-center">USER</p>
+    <p class="fs-1 fw-bold text-center"><?php echo $_SESSION['userName']; ?></p>
     <!-- shopping -->
     <h2 class="fs-2 my-5">My shopping</h2>
     <article class="dropdown-center">
@@ -85,7 +84,15 @@
             Balance
         </button>
         <ul class="dropdown-menu col-12">
-            <li class="dropdown-item fs-2 text-center">Your balance is :<?php ?></li>
+            <li class="dropdown-item fs-2 text-center">Your balance is :
+               <?php 
+                   $email = $_SESSION['email'];
+                   $balance = connect();
+                   $balance = $balance->query("SELECT * from users where email='$email'");
+                   $balance = $balance->fetch();
+                   echo strval($balance['balance']);
+               ?> 
+            </li>
         </ul>
     </article>
     <!-- top up -->
@@ -95,7 +102,7 @@
         </button>
     </article>
     <article class="d-none topUp__form d-flex justify-content-center my-3">
-        <form class="border p-5 w-75 rounded formAjax" action="../php/myAccount.php" method="post">
+        <form class="border p-5 w-75 rounded formAjax" action="php/myAccount.php" method="post">
                <!-- balance -->
                <div>
                    <input type="number" name="balance" id="balance" 
@@ -143,8 +150,5 @@
         <a class="btn btn-primary btn-lg col-5 mx-5" href="editProfile.php" role="button">Edit profile</a>
     </article>
 </section>
-<?php
-    include("../template/uFooter.php");
-?>
-<script src="../userJs/myAccount.js"></script>
-<script src="../javascript/ajax.js"></script>
+<script src="userJs/myAccount.js"></script>
+<script src="javascript/ajax.js"></script>

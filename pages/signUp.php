@@ -1,15 +1,12 @@
-<?php
-    include("../template/header.php");
-?>
-    <section >
+    <section>
         <article class="py-5 d-flex flex-wrap justify-content-center">
            <h1 class="my-5 text-center w-100 fw-bpld fs-1">Sign Up</h1> 
            <!-- form -->
-           <form class="border p-5 w-75 rounded formAjax" action="../php/signUp.php" method="post">
+           <form class="border p-5 w-75 rounded formAjax" action="php/signUp.php" method="post">
                <!-- img -->
                <div class="d-flex justify-content-center">
                    <img class="w-50 border rounded-circle opacity-50 bg-light"
-                        src="../images/header/profile-icon.png" alt="profile-icon">
+                        src="images/header/profile-icon.png" alt="profile-icon">
                </div>
                <!-- name -->
                <div>
@@ -72,7 +69,4 @@
            </form>
         </article>
     </section>
-    <script src="../javascript/signUp.js"></script>
-<?php
-    include("../template/footer.php");
-?>
+    <script src="javascript/signUp.js"></script>
