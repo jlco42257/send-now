@@ -1,11 +1,11 @@
-    <section class="bg-light">
+    <section class="bg-light mt-5">
         <!--             CAROUSEL             -->
-        <h2 class="text-primary text-center pt-5 fs-1 mt-5 fw-bold">
+        <h2 class="text-primary text-center pt-5 mt-5 fw-bold fs-1">
             Fast, Reliable And Safe Deliveries!
         </h2>
         <article 
             id="carouselExampleAutoplaying" 
-            class="carousel slide container mt-5" 
+            class="carousel slide container mt-5 promotions" 
             data-bs-ride="carousel"
         >
             <!-- indicators -->
@@ -24,15 +24,15 @@
             <!-- images -->
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-              <img src="images/main/black-friday.jpg" class="d-block w-100" alt="oferta_1">
+              <img src="images/main/black-friday.jpg" class="d-block w-100 promotions__img" alt="oferta_1">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
               <img src="images/main/black-friday-1.jpg" 
-                  class="d-block w-100" alt="oferta_2">
+                  class="d-block w-100 promotions__img" alt="oferta_2">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
               <img src="images/main/black-friday-2.jpg" 
-                  class="d-block w-100" alt="oferta_3">
+                  class="d-block w-100 promotions__img" alt="oferta_3">
             </div>
           </div>
           <!-- buttons -->
@@ -56,13 +56,13 @@
         <h2 class="text-center text-primary my-5 fs-1 fw-bold">Sales</h2>
         <article class="container-fluid d-flex justify-content-evenly flex-wrap">
             <!-- first card -->
-          <div class="card col-3">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
+          <div class="card col-3 cards">
+              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
                 </strong>                
-                <p class="card-text">5% off</p>                
+                <p class="card-text fs-5">5% off</p>                
                 <p class="card-text text-success">$749.900</p>
                 <div class="row justify-content-center">
                     <button type="button" class="btn btn-primary btn-lg sales__button">Buy</button>
@@ -70,13 +70,13 @@
               </div>
           </div>
             <!-- second card -->
-          <div class="card col-3">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
+          <div class="card col-3 cards">
+              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
                 </strong>                
-                <p class="card-text">5% off</p>                
+                <p class="card-text fs-5">5% off</p>                
                 <p class="card-text text-success">$749.900</p>
                 <div class="row justify-content-center">
                     <button type="button" class="btn btn-primary btn-lg sales__button">Buy</button>
@@ -84,13 +84,13 @@
               </div>
           </div>
             <!-- thrid card -->
-          <div class="card col-3">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top" alt="...">
+          <div class="card col-3 cards">
+              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
                 </strong>                
-                <p class="card-text">5% off</p>                
+                <p class="card-text fs-5">5% off</p>                
                 <p class="card-text text-success">$749.900</p>
                 <div class="row justify-content-center">
                     <button type="button" class="btn btn-primary btn-lg sales__button">Buy</button>
@@ -105,3 +105,4 @@
         </div>
         </article>
     </section>
+    <script src="javascript/home.js"></script>

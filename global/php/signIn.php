@@ -8,7 +8,7 @@
     $checkAccount = $checkAccount->query("SELECT * FROM users WHERE email='$email' AND pass='$pass'");
     if($checkAccount->rowCount() == 1){
         $checkAccount = $checkAccount->fetch();
-        $_SESSION['id'] = $checkAccount['id'];
+        $_SESSION['id'] = $checkAccount['userId'];
         $_SESSION['name'] = $checkAccount['names'];
         $_SESSION['lastName'] = $checkAccount['lastName'];
         $_SESSION['userName'] = $checkAccount['userName'];

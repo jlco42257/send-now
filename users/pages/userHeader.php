@@ -12,28 +12,29 @@
         }  
     }
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Now!</title>
-    <!--             BOOTSTRAP CSS             -->
-    <link 
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
-        rel="stylesheet" 
-        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
-        crossorigin="anonymous">
-    <!-- css -->
-    <link rel="stylesheet" href="pages_styles/header-footer.css">
-</head>
 <body>
     <header>
         <!--             NAVBAR             -->
-        <nav class="navbar navbar-expand-lg bg-primary">
-            <div class="container-fluid bg-primary navbar-dark fixed-top">
+        <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+            <div class="container-fluid bg-primary navbar-dark">
                 <!--            BRAND             -->
                 <a class="navbar-brand fs-1 fw-bold" href="<?php echo $url; ?>?page=users/home">Send Now!</a>     
+                <!--             SEARCH BAR             -->
+                    <form class="d-flex my-2 flex-grow-1 nav__form mx-5" role="search"
+                         action="products.php" method="post">
+                        <input 
+                             class="form-control rounded-0 rounded-start-pill nav__form--input ms-5 border-light fs-4" 
+                             type="search" placeholder="Search" 
+                             style="min-height: 4rem;"
+                             aria-label="Search">
+                        <button 
+                            class="btn btn-outline-light nav__form--button rounded-0 rounded-end-pill me-5" 
+                            type="submit">
+                            <span class="material-symbols-outlined">
+search
+</span>
+                        </button>
+                    </form>
                 <!--             COLLAPSE BUTTON             -->
                 <button 
                     class="navbar-toggler nav__container--button" 
@@ -46,30 +47,26 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <!--             MENU             -->
-                <div class="collapse navbar-collapse" id="navbarMenu">
-                    <ul class="navbar-nav me-5">
+                <div class="collapse navbar-collapse flex-grow-0 me-3" id="navbarMenu">
+                    <ul class="navbar-nav">
                         <!-- home -->
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="<?php echo $url; ?>?page=users/home">
+                        <li class="nav-item btn btn-primary fs-4">
+                            <a class="nav-link" aria-current="page" href="<?php echo $url; ?>?page=users/home">
                                 Home
                             </a>
                         </li>
-                        <!-- products -->
-                        <li class="nav-item">
-                           <a class="nav-link" href="<?php echo $url; ?>?page=users/products">Products</a> 
-                        </li>
                         <!-- account -->
-                        <li class="nav-item dropdown">
+                        <li class="nav-item dropdown btn btn-primary fs-4">
                             <a 
                                 class="nav-link dropdown-toggle" 
                                 href="#" 
                                 role="button" 
                                 data-bs-toggle="dropdown" 
                                 aria-expanded="false">
-                                Account
+                                Categories
                             </a>
                             <!-- account dropdown -->
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu w-100">
                                 <li>
                                     <a 
                                         class="dropdown-item" 
@@ -95,20 +92,24 @@
                                 </li>
                             </ul>
                         </li>
+                        <!-- shopping car  -->
+                        <li class="nav-item mx-2 fs-4">
+                           <a class="nav-link text-light" href="<?php echo $url; ?>?page=users/signUp">
+                               <span class="material-symbols-outlined pt-2 nav-link">
+                                   shopping_cart
+                               </span>
+                           </a>
+                        </li>
+                        <!-- my account -->
+                        <li class="nav-item mx-2 fs-4">
+                           <a class="nav-link" href="<?php echo $url; ?>?page=users/myAccount">
+                               <!-- img -->
+        <img class="bg-primary object-fit-cover rounded-circle border border-light"
+             src="images/main/ofertas/phone-1.jpeg" alt="profile-icon" style="width: 4rem;
+    height: 4rem;">
+                           </a>
+                        </li>
                     </ul>
-                    <!--             SEARCH BAR             -->
-                    <form class="d-flex my-2 nav__form flex-grow-1" role="search"
-                         action="products.php" method="post">
-                        <input 
-                             class="form-control me-2 nav__form--input" 
-                             type="search" placeholder="Search" 
-                             aria-label="Search">
-                        <button 
-                            class="btn btn-outline-light nav__form--button" 
-                            type="submit">
-                            Search
-                        </button>
-                    </form>
                 </div>
             </div>
         </nav>

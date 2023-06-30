@@ -16,9 +16,18 @@ body{
 :root{
     --color-secundario:#0047ab;      
 }
-/*              HEADER              */
+/*              HEADER          */
+.nav__form--input{
+    min-height: 4rem;
+}
 .nav__container--button:focus{
     box-shadow: none;
+}
+.nav__signUp:hover>a{
+    color:#000;
+}
+.nav__signIn:hover>a{
+    color:#fff;
 }
 section{
     flex-grow: 1;

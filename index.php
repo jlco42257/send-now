@@ -1,28 +1,53 @@
 <?php
     #    starting the session    #
-    require("php/sessionStart.php");
+    require("global/php/sessionStart.php");
+    #    user type    #
+        include("global/php/main.php");
 ?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Now!</title>
+    <!--             BOOTSTRAP CSS             -->
+    <link 
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" 
+        rel="stylesheet" 
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" 
+        crossorigin="anonymous">
+    <!--     css     -->
+    <link rel="stylesheet" href="global/styles/header-footer.css">
+    <!--     google icons     -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+</head>
+    <!--     header template     -->
     <?php
         #    if there is no address    #
         if(!isset($_GET['page']) || $_GET['page']==""){
-            $_GET['page']="index";
-        }
+            $_GET['page']="home";
+        }    
         #    if the user is logged in    #
         if(isset($_SESSION['email'])){
-           if(is_file("pages/".$_GET['page'].".php")){
-                include("template/userHeader.php");
-                include("pages/".$_GET['page'].".php");
+           if(is_file($user."pages/".$_GET['page'].".php")){
+                include("users/pages/userHeader.php");
+                include($user."pages/".$_GET['page'].".php");
             } 
         }else{
-            if(is_file("pages/".$_GET['page'].".php")){
-                include("template/header.php");
-                include("pages/".$_GET['page'].".php");
+            if(is_file($user."pages/".$_GET['page'].".php")){
+                include("unLoginUsers/pages/header.php");
+                include($user."pages/".$_GET['page'].".php");
             } 
         }
     ?>
+    <!--     footer template     -->
     <?php
-        include("template/footer.php");
+        include("global/pages/footer.php");
     ?>
-     <script src="javascript/home.js"></script>
+    <?php
+        echo '<link rel="stylesheet" href="' . $user . 'styles/' . $_GET['page'] . '.css">';
+    ?>
+     <script src="global/js/home.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

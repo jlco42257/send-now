@@ -6,6 +6,6 @@
          crossorigin="anonymous">
      </script>
      <!-- js -->
-     <script src="javascript/header-footer.js"></script>
+     <script src="global/js/header-footer.js"></script>
 </body>
 </html>
