@@ -1,12 +1,12 @@
-    <section >
+    <section class="my-5">
         <article class="py-5 d-flex flex-wrap justify-content-center">
            <h1 class="my-5 text-center w-100 fw-bpld fs-1">Sign In</h1> 
            <!-- form -->
-           <form class="border p-5 w-75 rounded formAjax" action="" method="post">
+           <form class="border p-5 rounded formAjax" action="" method="post">
                <!-- img -->
                <div class="d-flex justify-content-center">
-                   <img class="w-50 border rounded-circle opacity-50 bg-light"
-                        src="images/header/profile-icon.png" alt="profile-icon">
+                   <img class="border rounded-circle opacity-50 bg-light form__img"
+                        src="global/img/unLoginProfilePicture/profile-icon.png" alt="profile-icon">
                </div>
                <!-- email -->
                <div>
@@ -38,12 +38,12 @@
                </div>
                <?php
                    if(isset($_POST['email']) && isset($_POST['pass'])){
-                       require_once "php/main.php";
-                       require_once "php/signIn.php";
+                       require_once "global/php/main.php";
+                       require_once $user."php/signIn.php";
                    }
                ?>
            </form>
         </article>
     </section>
-    <script src="javascript/signIn.js"></script>
-    <!-- <script src="javascript/ajax.js"></script> -->
+    <script src="<?php echo $user; ?>js/signIn.js"></script>
+    <!-- <script src="global/js/ajax.js"></script> -->

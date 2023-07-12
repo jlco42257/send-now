@@ -24,14 +24,14 @@
             <!-- images -->
           <div class="carousel-inner">
             <div class="carousel-item active" data-bs-interval="3000">
-              <img src="images/main/black-friday.jpg" class="d-block w-100 promotions__img" alt="oferta_1">
+              <img src="global/img/home/carrousel/black-friday.jpg" class="d-block w-100 promotions__img" alt="oferta_1">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/main/black-friday-1.jpg" 
+              <img src="global/img/home/carrousel/black-friday-1.jpg" 
                   class="d-block w-100 promotions__img" alt="oferta_2">
             </div>
             <div class="carousel-item" data-bs-interval="3000">
-              <img src="images/main/black-friday-2.jpg" 
+              <img src="global/img/home/carrousel/black-friday-2.jpg" 
                   class="d-block w-100 promotions__img" alt="oferta_3">
             </div>
           </div>
@@ -105,4 +105,3 @@
         </div>
         </article>
     </section>
-    <script src="javascript/home.js"></script>

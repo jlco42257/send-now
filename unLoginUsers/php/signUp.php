@@ -1,7 +1,4 @@
-<?php
-    #    including connection to the db    #
-    include("main.php");
-    
+<?php  
     #    receive data of the form    #
     $name = $_POST['name'];
     $lastName = $_POST['lastName'];
@@ -75,16 +72,13 @@
     $save->execute($markers);
     
     if($save->rowCount() == 1){
-        echo '<div class="alert alert-light d-flex align-items-center" role="alert">
-                  <div class="text-center">
-                    User was saved. =)
-                  </div>
-               </div>
-               <p class="text-center">
-                   <a class="link-offset-2 link-underline link-underline-opacity-0" href="signIn.php">
-                       Sign In
-                   </a>
-               </p>';
+        if(headers_sent()){
+            echo '<script>
+               location.assign("?user=client");
+            </script>';
+        }else{
+            header("Location: ?user=client");
+        }
     }else{
         echo '<div class="alert alert-light d-flex align-items-center" role="alert">
                   <div class="text-center">

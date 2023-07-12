@@ -5,7 +5,7 @@
         <img class="bg-primary object-fit-fill"
              src="images/main/ofertas/phone-1.jpeg" alt="profile-icon">
     </div>
-    <p class="fs-1 fw-bold text-center"><?php echo $_SESSION['userName']; ?></p>
+    <p class="fs-1 fw-bold text-center"><?php echo $_SESSION['name']; ?></p>
     <!-- shopping -->
     <h2 class="fs-2 my-5">My shopping</h2>
     <article class="dropdown-center">

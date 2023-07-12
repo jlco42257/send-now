@@ -30,7 +30,7 @@
         #    if the user is logged in    #
         if(isset($_SESSION['email'])){
            if(is_file($user."pages/".$_GET['page'].".php")){
-                include("users/pages/userHeader.php");
+                include($user."pages/header.php");
                 include($user."pages/".$_GET['page'].".php");
             } 
         }else{
@@ -44,10 +44,10 @@
     <?php
         include("global/pages/footer.php");
     ?>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <?php
         echo '<link rel="stylesheet" href="' . $user . 'styles/' . $_GET['page'] . '.css">';
     ?>
      <script src="global/js/home.js"></script>
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

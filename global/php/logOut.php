@@ -5,9 +5,9 @@
     #    redirect to index    #
     if(headers_sent()){
         echo '<script>
-                location.assign("../");
+                location.assign("../../");
             </script>';
     }else{
-        header("Location: ../");
+        header("Location: ../../");
     }  
 ?>

@@ -18,14 +18,13 @@
         <nav class="navbar navbar-expand-lg bg-primary fixed-top">
             <div class="container-fluid bg-primary navbar-dark">
                 <!--            BRAND             -->
-                <a class="navbar-brand fs-1 fw-bold" href="<?php echo $url; ?>?page=users/home">Send Now!</a>     
+                <a class="navbar-brand fs-1 fw-bold" href="<?php echo $url; ?>?user=admin">Send Now!</a>     
                 <!--             SEARCH BAR             -->
                     <form class="d-flex my-2 flex-grow-1 nav__form mx-5" role="search"
                          action="products.php" method="post">
                         <input 
                              class="form-control rounded-0 rounded-start-pill nav__form--input ms-5 border-light fs-4" 
                              type="search" placeholder="Search" 
-                             style="min-height: 4rem;"
                              aria-label="Search">
                         <button 
                             class="btn btn-outline-light nav__form--button rounded-0 rounded-end-pill me-5" 
@@ -51,7 +50,7 @@ search
                     <ul class="navbar-nav">
                         <!-- home -->
                         <li class="nav-item btn btn-primary fs-4">
-                            <a class="nav-link" aria-current="page" href="<?php echo $url; ?>?page=users/home">
+                            <a class="nav-link" aria-current="page" href="<?php echo $url; ?>?user=admin">
                                 Home
                             </a>
                         </li>
@@ -92,22 +91,28 @@ search
                                 </li>
                             </ul>
                         </li>
-                        <!-- shopping car  -->
-                        <li class="nav-item mx-2 fs-4">
-                           <a class="nav-link text-light" href="<?php echo $url; ?>?page=users/signUp">
-                               <span class="material-symbols-outlined pt-2 nav-link">
-                                   shopping_cart
-                               </span>
-                           </a>
-                        </li>
                         <!-- my account -->
-                        <li class="nav-item mx-2 fs-4">
-                           <a class="nav-link" href="<?php echo $url; ?>?page=users/myAccount">
+                        <li class="nav-item mx-2 fs-4 dropdown">
+                           <a class="nav-link dropdown-toggle" href="#"
+                                role="button" 
+                                data-bs-toggle="dropdown" 
+                                aria-expanded="false"
+                            >
                                <!-- img -->
-        <img class="bg-primary object-fit-cover rounded-circle border border-light"
-             src="images/main/ofertas/phone-1.jpeg" alt="profile-icon" style="width: 4rem;
-    height: 4rem;">
+                               <img class="bg-primary object-fit-cover rounded-circle border border-light"
+                                     src="images/main/ofertas/phone-1.jpeg" alt="profile-icon" style="width: 4rem;
+                                height: 4rem;">
                            </a>
+                           <!-- account dropdown -->
+                            <ul class="dropdown-menu w-100">
+                                <li>
+                                    <a 
+                                        class="dropdown-item" 
+                                        href="<?php echo $url; ?>?page=myAccount&user=admin">
+                                        My Account
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>

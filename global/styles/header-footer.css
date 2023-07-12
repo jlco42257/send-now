@@ -28,10 +28,12 @@ body{
 }
 .nav__signIn:hover>a{
     color:#fff;
-}
-section{
-    flex-grow: 1;
 } 
+#profileImg{
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+}
 /*              FOOTER                       */
 footer{
     background-color: var(--color-secundario);
