@@ -12,8 +12,7 @@ Breve descripción o introducción del proyecto.
 - [Uso](#uso)
 - [Contribución](#contribución)
 - [Créditos](#créditos)
-- [Licencia](#licencia)
-
+  
 ## Descripción
 
 En esta sección, proporciona una descripción más detallada de tu proyecto de e-commerce. Explica su propósito, qué problema resuelve y cómo funciona. Puedes incluir capturas de pantalla o enlaces a la demostración en vivo si tienes alguno.
@@ -46,7 +45,3 @@ Indica si aceptas contribuciones a tu proyecto y cómo los interesados pueden ha
 ## Créditos
 
 En esta sección, da reconocimiento a cualquier recurso de terceros que hayas utilizado en tu proyecto. Esto puede incluir bibliotecas, tutoriales, iconos o cualquier otra cosa que hayas utilizado.
-
-## Licencia
-
-Especifica la licencia bajo la cual se distribuye tu proyecto de e-commerce. Puedes utilizar [Choose a License](https://choosealicense.com/) para seleccionar una licencia adecuada para tu proyecto.
