@@ -1,47 +1,33 @@
 # send-now
 
-
-Breve descripción o introducción del proyecto.
+Este proyecto es una aplicación web de comercio electrónico diseñada para facilitar la compra y venta de productos en línea. Proporciona una plataforma segura y conveniente donde los usuarios pueden registrarse, buscar productos, publicar productos para la venta y realizar transacciones seguras.
 
 ## Tabla de contenidos
 
-- [Descripción](#descripción)
 - [Características](#características)
 - [Problemáticas Solucionadas](#problemáticas-solucionadas)
-- [Instalación](#instalación)
-- [Uso](#uso)
-- [Contribución](#contribución)
-- [Créditos](#créditos)
-  
-## Descripción
-
-En esta sección, proporciona una descripción más detallada de tu proyecto de e-commerce. Explica su propósito, qué problema resuelve y cómo funciona. Puedes incluir capturas de pantalla o enlaces a la demostración en vivo si tienes alguno.
+- [Tecnologías Utilizadas](#tecnologías-utilizadas)
 
 ## Características
 
-Enumera las principales características y funcionalidades de tu e-commerce. Puedes incluir una lista o descripciones detalladas de las características más importantes.
+- Registro de usuarios: Los usuarios pueden crear una cuenta y acceder a funciones personalizadas.
+- Búsqueda y visualización de productos: Los usuarios pueden buscar productos, filtrar los resultados y ver detalles de los productos.
+- Publicación de productos: Los usuarios pueden cargar información y fotos de los productos que desean vender.
+- Carrito de compras: Los usuarios pueden agregar productos a su carrito y proceder al proceso de pago.
+- Proceso de pago: Se proporcionan opciones de pago seguras para completar las transacciones.
+- Gestión de perfiles: Los usuarios pueden buscar y ver perfiles de otros usuarios, establecer contacto y conocer la reputación de los vendedores.
+- Cuentas de administradores: Se crean cuentas de administradores con privilegios adicionales para gestionar el funcionamiento de la plataforma.
 
 ## Problemáticas Solucionadas
 
-- **Problemática 1:** Descripción de la problemática que soluciona tu proyecto.
-- **Problemática 2:** Descripción de otra problemática que soluciona tu proyecto.
-- **Problemática 3:** Descripción de otra problemática que soluciona tu proyecto.
-- ...
+- **Acceso conveniente**: Proporciona a los usuarios un acceso fácil y conveniente a una amplia variedad de productos desde la comodidad de su hogar, eliminando la necesidad de visitar físicamente múltiples tiendas.
+- **Seguridad en las transacciones**: Ofrece un entorno seguro para realizar transacciones en línea, protegiendo la información financiera y personal de los usuarios mediante métodos de encriptación y autenticación.
+- **Amplia selección de productos**: Permite a los usuarios explorar y acceder a una amplia variedad de productos de diferentes categorías, marcas y proveedores, brindando una experiencia de compra más diversa.
+- **Interacción entre usuarios**: Facilita la interacción entre los usuarios al permitirles buscar y ver perfiles de otros usuarios, establecer contacto y conocer la reputación de los vendedores antes de realizar una compra.
+- **Facilidad de publicación de productos**: Permite a los usuarios publicar productos para la venta de manera sencilla, ofreciendo una plataforma para que los vendedores promocionen y comercialicen sus productos de manera efectiva.
 
-En esta sección, enumera las problemáticas específicas que tu proyecto de e-commerce soluciona. Puedes explicar cada problemática en detalle y cómo tu proyecto aborda cada una de ellas.
+## Tecnologías utilizadas
 
-## Instalación
-
-Proporciona instrucciones claras sobre cómo instalar y configurar tu proyecto en un entorno local. Incluye los requisitos previos necesarios y los comandos específicos que los usuarios deben ejecutar.
-
-## Uso
-
-Explica cómo utilizar tu e-commerce en detalle. Proporciona ejemplos de código, capturas de pantalla o pasos específicos para ayudar a los usuarios a entender cómo interactuar con tu proyecto.
-
-## Contribución
-
-Indica si aceptas contribuciones a tu proyecto y cómo los interesados pueden hacerlo. Proporciona pautas claras para que los colaboradores potenciales sepan cómo presentar mejor sus cambios o mejoras.
-
-## Créditos
-
-En esta sección, da reconocimiento a cualquier recurso de terceros que hayas utilizado en tu proyecto. Esto puede incluir bibliotecas, tutoriales, iconos o cualquier otra cosa que hayas utilizado.
+- Lenguajes de programación: Html, Css, Javascript y PHP
+- Frameworks y bibliotecas: Bootstrap
+- Base de datos: MySQL
