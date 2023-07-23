@@ -57,7 +57,7 @@
         <article class="container-fluid d-flex justify-content-evenly flex-wrap">
             <!-- first card -->
           <div class="card col-3 cards">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
+              <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
@@ -71,7 +71,7 @@
           </div>
             <!-- second card -->
           <div class="card col-3 cards">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="...">
+              <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
@@ -85,7 +85,7 @@
           </div>
             <!-- thrid card -->
           <div class="card col-3 cards">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="...">
+              <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb

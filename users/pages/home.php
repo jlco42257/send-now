@@ -1,4 +1,15 @@
     <section class="bg-light mt-5">
+        <!-- MY ACCOUNT OFFCANVAS -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header d-flex">
+            <h3 class="offcanvas-title flex-grow-1 text-center text-capitalize" id="offcanvasExampleLabel">
+                <?php echo $_SESSION['userName']; ?>
+            </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+          </div>
+        </div>
         <!--             CAROUSEL             -->
         <h2 class="text-primary text-center pt-5 mt-5 fw-bold fs-1">
             Fast, Reliable And Safe Deliveries!
@@ -57,7 +68,7 @@
         <article class="container-fluid d-flex justify-content-evenly flex-wrap">
             <!-- first card -->
           <div class="card col-3 cards">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
+              <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
@@ -71,7 +82,7 @@
           </div>
             <!-- second card -->
           <div class="card col-3 cards">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="...">
+              <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb
@@ -85,7 +96,7 @@
           </div>
             <!-- thrid card -->
           <div class="card col-3 cards">
-              <img src="images/main/ofertas/phone-1.jpeg" class="card-img-top cards__img" alt="...">
+              <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
               <div class="card-body fs-4">
                 <strong class="card-title">
                     OPPO A57 128GB/4gb

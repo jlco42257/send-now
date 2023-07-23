@@ -55,7 +55,7 @@ search
                                 Home
                             </a>
                         </li>
-                        <!-- account -->
+                        <!-- CATEGORIES -->
                         <li class="nav-item dropdown btn btn-primary fs-4">
                             <a 
                                 class="nav-link dropdown-toggle" 
@@ -65,7 +65,7 @@ search
                                 aria-expanded="false">
                                 Categories
                             </a>
-                            <!-- account dropdown -->
+                            <!-- categories dropdown -->
                             <ul class="dropdown-menu w-100">
                                 <li>
                                     <a 
@@ -102,26 +102,12 @@ search
                         </li>
                         <!-- my account -->
                         <li class="nav-item ms-2 fs-4 dropdown">
-                           <a class="nav-link" href="#"
-                                role="button" 
-                                data-bs-toggle="dropdown"                                 
-                                aria-expanded="false"
-                            >
-                               <!-- img -->
+                           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                              <!-- img -->
                                <img class="bg-primary object-fit-cover rounded-circle border border-light"
-                                     src="images/main/ofertas/phone-1.jpeg" alt="profile-icon" style="width: 4rem;
+                                     src="global/img/home/products/phone-1.jpeg" alt="profile-icon" style="width: 4rem;
                                 height: 4rem;">
-                           </a>
-                           <!-- account dropdown -->
-                            <ul class="dropdown-menu ">
-                                <li>
-                                    <a 
-                                        class="dropdown-item" 
-                                        href="<?php echo $url; ?>?page=myAccount&user=client">
-                                        My Account
-                                    </a>
-                                </li>
-                            </ul>
+                            </button>
                         </li>
                     </ul>
                 </div>
