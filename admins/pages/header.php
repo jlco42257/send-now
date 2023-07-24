@@ -93,7 +93,7 @@ search
                         </li>
                         <!-- my account -->
                         <li class="nav-item ms-2 fs-4 dropdown">
-                           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                           <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#myAccountOffcanva" aria-controls="offcanvasExample">
                               <!-- img -->
                                <img class="bg-primary object-fit-cover rounded-circle border border-light"
                                      src="global/img/home/products/phone-1.jpeg" alt="profile-icon" style="width: 4rem;

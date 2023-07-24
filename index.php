@@ -31,6 +31,7 @@
         if(isset($_SESSION['email'])){
            if(is_file($user."pages/".$_GET['page'].".php")){
                 include($user."pages/header.php");
+                include($user."pages/aside.php");
                 include($user."pages/".$_GET['page'].".php");
             } 
         }else{

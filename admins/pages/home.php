@@ -1,21 +1,3 @@
-    <aside>
-        <!-- MY ACCOUNT OFFCANVAS -->
-        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-          <div class="offcanvas-header d-flex">
-            <h3 class="offcanvas-title flex-grow-1 text-center text-capitalize" id="offcanvasExampleLabel">
-                <?php echo $_SESSION['name']." ".$_SESSION['lastName']; ?>
-            </h3>
-            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-          </div>
-          <div class="offcanvas-body">
-              <ul>
-                  <li>
-                      <a class="text-capitalize" href="">agregar productos</a>
-                  </li>
-              </ul>
-          </div>
-        </div>
-    </aside>
     <section class="bg-light mt-5">
         <!--             CAROUSEL             -->
         <h2 class="text-primary text-center pt-5 mt-5 fw-bold fs-1">

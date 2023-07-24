@@ -6,7 +6,8 @@ const topUp = document.querySelector(".topUp__button");
 const topUpForm = document.querySelector(".topUp__form");
 // log out if the button is pressed    //
 logOut.addEventListener("click",e=>{
-    location.assign("global/php/logOut.php")});
+    if(confirm("are you sure about log out?")){
+    location.assign("global/php/logOut.php")}});
 //    to display the form    //
 topUp.addEventListener("click",e=>{
     topUpForm.classList.toggle("d-none"); 
