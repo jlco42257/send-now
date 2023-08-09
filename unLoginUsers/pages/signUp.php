@@ -26,6 +26,12 @@
                        class="form-control my-4 border-0 border-bottom fs-4" 
                        placeholder="Username">
                </div>
+               <!-- country -->
+               <div>
+                   <input type="text" name="country" id="country" 
+                       class="form-control my-4 border-0 border-bottom fs-4" 
+                       placeholder="Country">
+               </div>
                <!-- phone -->
                <div>
                    <input type="number" name="phone" id="phone" 

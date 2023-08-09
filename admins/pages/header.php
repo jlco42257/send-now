@@ -1,5 +1,5 @@
 <?php
-    $url = "http://".$_SERVER['HTTP_HOST']."/envia-ya";
+    $url = "http://".$_SERVER['HTTP_HOST']."/send-now";
     #    verifying the session    #
     if(!isset($_SESSION['email'])){
         session_destroy();  

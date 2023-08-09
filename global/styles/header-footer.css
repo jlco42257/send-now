@@ -20,6 +20,9 @@ body{
 .nav__form--input{
     min-height: 4rem;
 }
+.account__icon{
+    font-size: 3rem;
+}
 .nav__container--button:focus{
     box-shadow: none;
 }

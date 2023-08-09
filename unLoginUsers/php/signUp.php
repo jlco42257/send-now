@@ -3,6 +3,7 @@
     $name = $_POST['name'];
     $lastName = $_POST['lastName'];
     $userName = $_POST['userName'];
+    $country = $_POST['country'];
     $phone = $_POST['phone'];
     $phone = intval($phone);
     $email = $_POST['email'];
@@ -60,14 +61,15 @@
     
     #    saving data in the db    #
     $save = connect();
-    $save = $save->prepare("INSERT INTO users(names,lastName,userName,phone,email,pass) VALUES(:name,:lastName,:userName,:phone,:email,:pass)");
+    $save = $save->prepare("INSERT INTO users(names,lastName,userName,phone,email,pass,country) VALUES(:name,:lastName,:userName,:phone,:email,:pass,:country)");
     $markers = [
         ":name"=>$name,
         ":lastName"=>$lastName,
         ":userName"=>$userName,
         ":phone"=>$phone,
         ":email"=>$email,
-        ":pass"=>$pass
+        ":pass"=>$pass,
+        ":country"=>$country
     ];
     $save->execute($markers);
     
