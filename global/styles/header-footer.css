@@ -1,0 +1,44 @@
+*{
+    box-sizing: boder-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: Georgia,serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+:root{
+    --color-secundario:#0047ab;      
+}
+/*              HEADER          */
+.nav__form--input{
+    min-height: 4rem;
+}
+.account__icon{
+    font-size: 3rem;
+}
+.nav__container--button:focus{
+    box-shadow: none;
+}
+.nav__signUp:hover>a{
+    color:#000;
+}
+.nav__signIn:hover>a{
+    color:#fff;
+} 
+#profileImg{
+    width: 40px;
+    height: 40px;
+    border: 2px solid red;
+}
+/*              FOOTER                       */
+footer{
+    background-color: var(--color-secundario);
+    color: #ffffff;   
+}

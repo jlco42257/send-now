@@ -1,0 +1,7 @@
+.form{
+    min-width: 35vw;
+}
+.form__img{
+    max-height: 20rem;
+    max-width: 20rem;
+}
