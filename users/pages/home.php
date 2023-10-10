@@ -1,4 +1,4 @@
-    <section class="bg-light mt-5">
+    <section class="bg-light">
         <!-- MY ACCOUNT OFFCANVAS -->
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
           <div class="offcanvas-header d-flex">
@@ -11,7 +11,7 @@
           </div>
         </div>
         <!--             CAROUSEL             -->
-        <h2 class="text-primary text-center pt-5 mt-5 fw-bold fs-1">
+        <h2 class="text-primary text-center pt-5 fw-bold fs-1">
             Fast, Reliable And Safe Deliveries!
         </h2>
         <article 

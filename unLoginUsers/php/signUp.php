@@ -35,7 +35,7 @@
     
     #    verify phpne in the db    #
     $checkPhone = connect();
-    $checkPhone = $checkPhone->query("SELECT * FROM users WHERE phone='$phone'");
+    $checkPhone = $checkPhone->query("SELECT * FROM phones WHERE phone='$phone'");
     if($checkPhone->rowCount() > 0){
         echo '<div class="alert alert-light d-flex align-items-center" role="alert">
                   <div class="text-center">
@@ -48,7 +48,7 @@
     
     #    verify email in the db    #
     $checkEmail = connect();
-    $checkEmail = $checkEmail->query("SELECT * FROM users WHERE userName='$userName'");
+    $checkEmail = $checkEmail->query("SELECT * FROM emails WHERE email='$email'");
     if($checkEmail->rowCount() > 0){
         echo '<div class="alert alert-light d-flex align-items-center" role="alert">
                   <div class="text-center">
@@ -61,13 +61,11 @@
     
     #    saving data in the db    #
     $save = connect();
-    $save = $save->prepare("INSERT INTO users(name,lastName,userName,phone,email,pass,country) VALUES(:name,:lastName,:userName,:phone,:email,:pass,:country)");
+    $save = $save->prepare("INSERT INTO users(name,lastName,userName,pass,country) VALUES(:name,:lastName,:userName,:pass,:country)");
     $markers = [
         ":name"=>$name,
         ":lastName"=>$lastName,
         ":userName"=>$userName,
-        ":phone"=>$phone,
-        ":email"=>$email,
         ":pass"=>$pass,
         ":country"=>$country
     ];
@@ -75,14 +73,37 @@
     
     if($save->rowCount() == 1){
       $account = connect();
-      $account = $account->query("SELECT * FROM users WHERE email='$email' AND pass='$pass'");
+      $account = $account->query("SELECT * FROM users WHERE name='$name' AND lastName='$lastName'");
       if($account->rowCount() == 1){
           $account = $account->fetch();
-          $_SESSION['id'] = $account['userId'];
-          $_SESSION['name'] = $account['names'];
+          
+          
+          
+          $save = connect();
+          $save = $save->prepare("INSERT INTO phones(user_id,phone) VALUES(:userId,:phone)");
+          $markers = [
+            ":userId"=>$account['id'],
+            ":phone"=>$phone
+          ];
+          $save->execute($markers);
+          
+          $save = connect();
+          $save = $save->prepare("INSERT INTO emails(user_id,email) VALUES(:userId,:email)");
+          $markers = [
+            ":userId"=>$account['id'],
+            ":email"=>$email
+          ];
+          $save->execute($markers);
+          
+          
+          $_SESSION['id'] = $account['id'];
+          $_SESSION['name'] = $account['name'];
           $_SESSION['lastName'] = $account['lastName'];
           $_SESSION['userName'] = $account['userName'];
-          $_SESSION['email'] = $account['email'];
+          $_SESSION['email'] = $email;
+          $_SESSION['phone'] = $phone;
+          $_SESSION['country'] = $account['country'];
+          $_SESSION['pass'] = $account['pass'];
           if(headers_sent()){
               echo '<script>
                  location.assign("?user=client");

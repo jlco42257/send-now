@@ -22,7 +22,10 @@
                   <h4 class="text-capitalize bg-primary rounded fs-3 w-100 text-light text-center p-2">manage users</h4>
                   <ul class="list-group rounded my-3 p-2">
                       <li class="list-group-item">
-                          <a class="text-capitalize text-decoration-none" href="<?php echo $url; ?>?page=addProducts&user=admin">add admin profiles</a>
+                          <a class="text-capitalize text-decoration-none" href="<?php echo $url; ?>?page=addAdmins&user=admin">add admin profiles</a>
+                      </li>
+                      <li class="list-group-item">
+                          <a class="text-capitalize text-decoration-none" href="<?php echo $url; ?>?page=deleteAdmins&user=admin">delete admin profiles</a>
                       </li>
                       <li class="list-group-item">
                           <a class="text-capitalize text-decoration-none" href="<?php echo $url; ?>?page=addProducts&user=admin">reported users</a>

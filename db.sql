@@ -112,25 +112,29 @@ CREATE TABLE "Reviews" (
 
 
 
-CREATE TABLE Profile_photos (
-    id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    url VARCHAR(100)
-);
 
-CREATE TABLE Users (
+CREATE TABLE users (
     id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
     lastName VARCHAR(25) NOT NULL,
     userName VARCHAR(20) NOT NULL,
-    email VARCHAR(30) NOT NULL,
     pass VARCHAR(20) NOT NULL,
     country VARCHAR(20) NOT NULL,
-    phone INT(15) NOT NULL, 
-    profile_photo_id INT,
-    FOREIGN KEY (profile_photo_id) REFERENCES Profile_photos(id)
+    profile_photo_url VARCHAR(100)
 );
-
-CREATE TABLE Admins (
+CREATE TABLE phones(
+  id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  phone INT(15) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+CREATE TABLE emails(
+  id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id INT,
+  email VARCHAR(30) NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES users(id)
+);
+CREATE TABLE admins (
     id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(20) NOT NULL,
     lastName VARCHAR(30) NOT NULL,
@@ -139,16 +143,15 @@ CREATE TABLE Admins (
     pass VARCHAR(20) NOT NULL,
     country VARCHAR(20) NOT NULL,
     phone INT(15) NOT NULL, 
-    profile_photo_id INT,
-    FOREIGN KEY (profile_photo_id) REFERENCES Profile_photos(id)
+    profile_photo_url VARCHAR(100)
 );
 
-CREATE TABLE Categories (
+CREATE TABLE categories (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) NOT NULL
 );
 
-CREATE TABLE Products (
+CREATE TABLE products (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(255) NOT NULL,
   description VARCHAR(255) NOT NULL,
@@ -157,58 +160,58 @@ CREATE TABLE Products (
   product_img VARCHAR(255) NOT NULL,
   user_id INT,
   category_id INT,
-  FOREIGN KEY (user_id) REFERENCES Users(id),
-  FOREIGN KEY (category_id) REFERENCES Categories(id)
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (category_id) REFERENCES categories(id)
 );
 
-CREATE TABLE Shopping_car (
+CREATE TABLE shopping_car (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
   product_id INT,
   total FLOAT(100,2) NOT NULL,
-  FOREIGN KEY (user_id) REFERENCES Users(id),
-  FOREIGN KEY (product_id) REFERENCES Products(id)
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-CREATE TABLE Buys (
+CREATE TABLE buys (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
   date DATE,
-  total FLOAT(100),
-  FOREIGN KEY (user_id) REFERENCES Users(id)
+  total FLOAT(100,2),
+  FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
-CREATE TABLE Purchase_details (
+CREATE TABLE purchase_details (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   buy_id INT,
   product_id INT,
   quantity INT(100) NOT NULL,
-  FOREIGN KEY (buy_id) REFERENCES Buys(id),
-  FOREIGN KEY (product_id) REFERENCES Products(id)
+  FOREIGN KEY (buy_id) REFERENCES buys(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
 );
 
-CREATE TABLE Messages (
+CREATE TABLE messages (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   content VARCHAR(500),
   message_date DATE
 );
 
-CREATE TABLE Chats (
+CREATE TABLE chats (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   message_id INT,
   transmitter_id INT,
   receiver_id INT,
-  FOREIGN KEY (message_id) REFERENCES Messages(id),
-  FOREIGN KEY (transmitter_id) REFERENCES Users(id),
-  FOREIGN KEY (receiver_id) REFERENCES Users(id)
+  FOREIGN KEY (message_id) REFERENCES messages(id),
+  FOREIGN KEY (transmitter_id) REFERENCES users(id),
+  FOREIGN KEY (receiver_id) REFERENCES users(id)
 );
 
-CREATE TABLE Reviews (
+CREATE TABLE reviews (
   id INT(100) NOT NULL AUTO_INCREMENT PRIMARY KEY,
   review VARCHAR(255),
   calification FLOAT(2,1),
   user_id INT,
   product_id INT,
-  FOREIGN KEY (user_id) REFERENCES Users(id),
-  FOREIGN KEY (product_id) REFERENCES Products(id)
+  FOREIGN KEY (user_id) REFERENCES users(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
 );
