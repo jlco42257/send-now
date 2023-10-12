@@ -1,3 +1,3 @@
-<section class="bg-light mt-5">
+  <main class="bg-light mt-5">
     
-</section>
+  </main>

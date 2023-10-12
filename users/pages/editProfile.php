@@ -1,18 +1,18 @@
-<section class="bg-light py-5">
+<main class="bg-light py-5">
   <h2 class="mb-5 text-center fs-1 fw-bold text-primary text-capitalize">edit profile</h2>
   <figure class="d-flex justify-content-center flex-wrap">
     <img class="profile__img w-25 h-25 rounded-circle" src="users/profileImg/phone-1.jpeg">
     <figcaption class="col-12 text-center">
-      <p class="fw-bold">
+      <span class="fw-bold">
         <?php
           echo $_SESSION['userName'];
         ?>
-      </p>
-      <p>
+      </span>
+      <span>
         <?php
           echo $_SESSION['name']." ".$_SESSION['lastName']
         ?>
-      </p>
+      </span>
     </figcaption>
   </figure>
   <form class="border p-5 rounded mx-5" method="post" action="">
@@ -38,9 +38,9 @@
       <button type="submit" class="text-capitalize btn btn-primary w-100 my-4 rounded-pill fs-4">confirm</button>
     </div>
     <?php
-    if(isset($_POST['newUserName'])){
-      include($user."php/editProfile.php");
-    }
-  ?>
+      if(isset($_POST['newUserName'])){
+        include($user."php/editProfile.php");
+      }
+    ?>
   </form>
 </section>

@@ -1,7 +1,7 @@
 <?php
     #    connecting to the db    #
     function connect(){
-        $pdo = new PDO('mysql:host=localhost;dbname=send_now','root','');
+        $pdo = new PDO('mysql:host=192.168.20.22;dbname=send_now','root','');
         return $pdo;
     }
     #    user type    #
