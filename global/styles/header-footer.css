@@ -17,9 +17,6 @@ body{
     --color-secundario:#0047ab;      
 }
 /*              HEADER          */
-.nav__form--input{
-    min-height: 4rem;
-}
 .account__icon{
     font-size: 3rem;
 }

@@ -1,4 +1,4 @@
-<main class="bg-light py-5">
+<main class="bg-light pt-5">
   <h2 class="mb-5 text-center fs-1 fw-bold text-primary text-capitalize">edit profile</h2>
   <figure class="d-flex justify-content-center flex-wrap">
     <img class="profile__img w-25 h-25 rounded-circle" src="users/profileImg/phone-1.jpeg">
@@ -15,7 +15,7 @@
       </span>
     </figcaption>
   </figure>
-  <form class="border p-5 rounded mx-5" method="post" action="">
+  <form class="border p-5 rounded m-5" method="post" action="">
     <div class="d-flex mb-3">
       <label class="text-capitalize fs-4 w-50">change user name:</label>
       <input type="text" name="newUserName" id="name" 

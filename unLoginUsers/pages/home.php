@@ -1,6 +1,6 @@
-  <main class="bg-light mt-5">
+  <main class="bg-light flex-grow-1">
     <!--             CAROUSEL             -->
-    <h2 class="text-primary text-center pt-5 mt-5 fw-bold fs-1">Fast, Reliable And Safe Deliveries!</h2>
+    <h2 class="text-primary text-center mt-5 fw-bold fs-1">Fast, Reliable And Safe Deliveries!</h2>
     <section id="carouselExampleAutoplaying" class="carousel slide container mt-5 promotions" data-bs-ride="carousel">
       <!-- indicators -->
       <div class="carousel-indicators">
@@ -31,46 +31,112 @@
       </button>
     </section>
     <!--             SALES             -->
-    <h2 class="text-center text-primary my-5 fs-1 fw-bold">Sales</h2>
-    <section class="container-fluid d-flex justify-content-evenly flex-wrap">
-      <!-- first card -->
-      <figure class="card col-3 cards">
-        <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
-        <figcaption class="card-body fs-4">
-          <strong class="card-title">OPPO A57 128GB/4gb</strong>
-          <span class="card-text fs-5">5% off</span>
-          <span class="card-text text-success">$749.900</span>
-          <div class="row justify-content-center">
-            <button type="button" class="btn btn-primary btn-lg sales__button">Buy</button>
-          </div>
-        </figcaption>
-      </figure>
-      <!-- second card -->
-      <figure class="card col-3 cards">
-        <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
-        <figcaption class="card-body fs-4">
-          <strong class="card-title">OPPO A57 128GB/4gb</strong>
-          <span class="card-text fs-5">5% off</span>
-          <span class="card-text text-success">$749.900</span>
-          <div class="row justify-content-center">
-            <button type="button" class="btn btn-primary btn-lg sales__button">Buy</button>
-          </div>
-        </figcaption>
-      </figure>
-      <!-- thrid card -->
-      <figure class="card col-3 cards">
-        <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
-        <figcaption class="card-body fs-4">
-          <strong class="card-title">OPPO A57 128GB/4gb</strong>
-          <span class="card-text fs-5">5% off</span>
-          <span class="card-text text-success">$749.900</span>
-          <div class="row justify-content-center">
-            <button type="button" class="btn btn-primary btn-lg sales__button">Buy</button>
-          </div>
-        </figcaption>
-      </figure>
-    </section>
-    <section class="text-center mt-5 pb-5">
-      <button type="button" class="btn btn-secondary btn-lg col-3 seeMore">See more</button>
+    <section class="container-fluid overflow-hidden p-0 px-3">
+      <h2 class="ms-2 text-primary mt-5 mb-3 me-1 fs-1 fw-bold d-inline-block">Sales</h2>
+      <a class="fs-4 seeMore link-underline link-underline-opacity-0">see more</a>
+      <div class="d-flex justify-content-evenly">
+        <!-- first card -->
+        <figure class="card col-3 cards p-0 mx-2">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- second card -->
+        <figure class="card col-3 cards p-0 mx-2">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- thrid card -->
+        <figure class="card col-3 cards p-0 mx-2">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img rounded" alt="...">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- fourth card -->
+        <figure class="card col-3 cards p-0 mx-2 d-none">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img rounded" alt="...">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+        </section
+    <!--             PHONES             -->
+    <section class="container-fluid overflow-hidden p-0 px-3">
+      <h2 class="ms-5 text-primary mt-5 mb-3 me-1 fs-1 fw-bold d-inline-block text-capitalize">phones</h2>
+      <a class="fs-4 seeMore link-underline link-underline-opacity-0">see more</a>
+      <div class="d-flex justify-content-evenly">
+        <!-- first card -->
+        <figure class="card col-3 cards p-0 mx-2">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="product_1">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- second card -->
+        <figure class="card col-3 cards p-0 mx-2">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img" alt="...">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- thrid card -->
+        <figure class="card col-3 cards p-0 mx-2">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img rounded" alt="...">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+        <!-- fourth card -->
+        <figure class="card col-3 cards p-0 mx-2 d-none">
+          <img src="global/img/home/products/phone-1.jpeg" class="card-img-top cards__img rounded" alt="...">
+          <figcaption class="card-body fs-4">
+            <strong class="card-title fs-5">OPPO A57 128GB/4gb</strong>
+            <span class="card-text fs-5 d-block">5% off</span>
+            <span class="card-text text-success d-block">$749.900</span>
+            <div class="row justify-content-center">
+              <button type="button" class="btn btn-primary btn-lg sales__button col-11">Buy</button>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
     </section>
   </main>

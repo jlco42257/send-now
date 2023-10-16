@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="global/styles/header-footer.css">
   <!--     google icons     -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,200" />
+  <!-- Icons -->
+  <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
 </head>
 <!--     header template     -->
 <?php
@@ -38,13 +40,15 @@
   }
 ?>
 <!--     footer     -->
-<footer class="p-2 fs-5">
+<footer class="p-3 pb-1 fs-5">
   <p>info@sendnow.com</p>
   <p>+1 (800) 123-4567</p>
   <p>1234 Main Street, Sendnow City, Shipment Status</p>
 </footer>
 <!--   bootstrap js   -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
 <?php
   echo '<link rel="stylesheet" href="' . $user . 'styles/' . $_GET['page'] . '.css">';
 ?>

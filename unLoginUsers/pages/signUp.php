@@ -1,43 +1,31 @@
-  <main class="my-5">
-    <section class="py-5 d-flex flex-wrap justify-content-center">
-      <h1 class="my-5 text-center w-100 fw-bpld fs-1">Sign Up</h1> 
+  <main class="flex-grow-1 d-flex flex-column justify-content-center">
+    <section class="pb-5 d-flex flex-wrap justify-content-center">
       <!-- form -->
-      <form class="border p-5 rounded form" action="" method="post">
+      <form class="border p-5 pb-0 rounded form col-10 col-sm-7 col-md-6 mt-5" action="" method="post">
+        <h1 class="text-center w-100 fw-bold fs-2 text-capitalize">sign up</h1>
         <!-- img -->
         <figure class="d-flex justify-content-center">
-          <img class="form__img border rounded-circle opacity-50 bg-light"src="global/img/unLoginProfilePicture/profile-icon.png" alt="profile-icon">
+          <img class="form__img border rounded-circle opacity-50 bg-light w-50 h-25"src="global/img/unLoginProfilePicture/profile-icon.png" alt="profile-icon">
         </figure>
-        <!-- name -->
-        <div>
-          <input type="text" name="name" id="name" class="form-control my-4 border-0 border-bottom fs-4" placeholder="Name" required>
+        <!-- name and last name -->
+        <div class="d-flex">
+          <input type="text" name="name" id="name" class="form-control m-4 border-0 border-bottom fs-4 w-50 text-capitalize" placeholder="name" required>
+          <input type="text" name="lastName" id="lastName" class="form-control m-4 border-0 border-bottom fs-4 w-50 text-capitalize" placeholder="last name" required>
         </div>
-        <!-- last name -->
-        <div>
-          <input type="text" name="lastName" id="lastName" class="form-control my-4 border-0 border-bottom fs-4" placeholder="Last Name" required>
+        <!-- username and country -->
+        <div class="d-flex">
+          <input type="text" name="userName" id="userName" class="form-control m-4 border-0 border-bottom fs-4 w-50 text-capitalize" placeholder="username" required>
+          <input type="text" name="country" id="country" class="form-control m-4 border-0 border-bottom fs-4 w-50 text-capitalize" placeholder="country" required>
         </div>
-        <!-- username -->
-        <div>
-          <input type="text" name="userName" id="userName" class="form-control my-4 border-0 border-bottom fs-4" placeholder="Username" required>
+        <!-- phone and email -->
+        <div class="d-flex">
+          <input type="number" name="phone" id="phone" class="form-control m-4 border-0 border-bottom fs-4 w-50 text-capitalize" placeholder="phone number" required>
+          <input type="email" name="email" id="email" class="form-control m-4 border-0 border-bottom fs-4 w-50 text-capitalize" placeholder="email" required>
         </div>
-        <!-- country -->
-        <div>
-          <input type="text" name="country" id="country" class="form-control my-4 border-0 border-bottom fs-4" placeholder="Country" required>
-        </div>
-        <!-- phone -->
-        <div>
-          <input type="number" name="phone" id="phone" class="form-control my-4 border-0 border-bottom fs-4" placeholder="Phone Number" required>
-        </div>
-        <!-- email -->
-        <div>
-          <input type="email" name="email" id="email" class="form-control my-4 border-0 border-bottom fs-4" placeholder="Email" required>
-        </div>
-        <!-- pass -->
-        <div>
-          <input type="password" name="pass" id="pass" class="form-control my-4 border-0 border-bottom fs-4" placeholder="Password" required>
-        </div>
-        <!-- pass confirm -->
-        <div>
-          <input type="password" name="confirmPass" id="confirmPass" class="form-control border-0 border-bottom fs-4"placeholder="Confirm Password" required>
+        <!-- pass and confirm -->
+        <div class="d-flex">
+          <input type="password" name="pass" id="pass" class="form-control m-4 border-0 border-bottom fs-4 text-capitalize" placeholder="password" required>
+          <input type="password" name="confirmPass" id="confirmPass" class="form-control m-4 border-0 border-bottom fs-4 text-capitalize"placeholder="confirm password" required>
         </div>
         <article class="d-flex justify-content-center flex-wrap">
           <!-- sign in -->
