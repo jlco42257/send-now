@@ -38,18 +38,6 @@
             </li>
           </ul>
         </div>
-        <!-- categories -->
-        <ul class="col-12 d-flex justify-content-center nav border-top border-dark-subtle mt-2" data-bs-theme="dark">
-          <li class="text-capitalize nav-item text-light">
-            <a class="nav-link" href="categories">categories</a>
-          </li>
-          <li class="text-capitalize mx-5 nav-item text-light">
-            <a class="nav-link" href="sales">sales</a>
-          </li>
-          <li class="text-capitalize nav-item text-light">
-            <a class="nav-link" href="#companies">companies</a>
-          </li>
-        </ul>
       </div>
     </nav>
   </header>

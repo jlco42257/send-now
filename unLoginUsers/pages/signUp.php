@@ -1,7 +1,7 @@
   <main class="flex-grow-1 d-flex flex-column justify-content-center">
     <section class="pb-5 d-flex flex-wrap justify-content-center">
       <!-- form -->
-      <form class="border p-5 pb-0 rounded form col-10 col-sm-7 col-md-6 mt-5" action="" method="post">
+      <form class="border p-5 rounded form col-10 col-sm-7 col-md-6 mt-5" action="" method="post">
         <h1 class="text-center w-100 fw-bold fs-2 text-capitalize">sign up</h1>
         <!-- img -->
         <figure class="d-flex justify-content-center">
@@ -42,4 +42,10 @@
       </form>
     </section>
   </main>
+  <style>
+    .form__img{
+      max-height: 10rem;
+      max-width: 10rem;
+    }
+  </style>
   <script src="<?php echo $user; ?>js/signUp.js"></script>
